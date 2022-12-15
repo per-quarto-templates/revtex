@@ -1,0 +1,29 @@
+title: REVTeX
+author: ["Astra Sword", "Michael Fox", "Jessie Durk"]
+version: 0.1.0
+contributes:
+  formats:
+    common:
+      knitr:
+        opts_chunk:
+          echo: false
+    pdf:
+      template: template.tex
+      partials:
+        - "partials/doc-class.tex"
+        # In frontmatter
+        - "partials/pandoc.tex"
+        ## Pandoc sub-partials
+        - "partials/tightlist.tex"
+        - "partials/tables.tex"
+        - "partials/graphics.tex"
+        - "partials/citations.tex"
+        # Before body
+        - "partials/title.tex"
+        - "partials/before-body.tex"
+        - "partials/toc.tex"
+        # After body
+        - "partials/before-bib.tex"
+        - "partials/biblio.tex"
+        - "partials/after-body.tex"
+        # Sub partials
