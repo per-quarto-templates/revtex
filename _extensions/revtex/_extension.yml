@@ -26,4 +26,3 @@ contributes:
         - "partials/before-bib.tex"
         - "partials/biblio.tex"
         - "partials/after-body.tex"
-        # Sub partials
