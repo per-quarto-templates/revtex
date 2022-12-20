@@ -9,7 +9,7 @@ contributes:
           echo: false
     pdf:
       template: template.tex
-      partials:
+      template-partials:
         - "partials/doc-class.tex"
         # In frontmatter
         - "partials/pandoc.tex"
