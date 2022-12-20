@@ -14,7 +14,11 @@ $endif$
 $-- Provides the tight list command required for Pandoc lists feature
 $tightlist.tex()$
 $-- Provides configuration for the output of tables, table captioning, and footnotes within tables.
-$tables.tex()$
+$-- %% Disabled %%
+$-- % Loads both the longtable and caption package, which cause problems when
+$-- % the document class is revtex4-2. May adapt this partial in the future.
+$-- $tables.tex()$
+$-- %%%%%%%%%%%%%%
 $-- Provides image scaling and placement configuration.
 $graphics.tex()$
 $-- When using CSL references, provides configuration and commands for outputing the bibliography.
