@@ -1,0 +1,14 @@
+project:
+  title: "revtex template test suite"
+  render:
+    - tests
+  output-dir: test-results
+  pre-render: bash scripts/remove-files-in-test-results.sh
+  post-render:
+    - bash scripts/move-intermediate-files-to-test-results.sh
+    - bash scripts/rename-test-folder-to-pdf.sh
+
+format:
+  revtex-pdf:
+    keep-tex: true
+
