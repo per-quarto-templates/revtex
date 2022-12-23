@@ -26,3 +26,8 @@ contributes:
         - "partials/before-bib.tex"
         - "partials/biblio.tex"
         - "partials/after-body.tex"
+      # Plugin options API
+      ## Layout options
+      society: aps
+      journal-style: false
+      layout: reprint

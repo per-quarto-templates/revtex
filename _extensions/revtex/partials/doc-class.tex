@@ -8,6 +8,15 @@ $-- Customize is needed, otherwise remove this partials to use Quarto default on
 $-- %%%%%%%%%%%%%%%%
 
 \documentclass[
+$if(society)$
+$society$,
+$endif$
+$if(journal-style)$
+$journal-style$,
+$endif$
+$if(layout)$
+$layout$,
+$endif$
 $if(fontsize)$
   $fontsize$,
 $endif$
