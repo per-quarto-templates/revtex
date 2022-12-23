@@ -1,0 +1,51 @@
+---
+title: "Testing REVTeX font commands (REVTeX 4.2 Author Guide p. 3, Table 1)"
+---
+
+# Text Fonts
+
+This text should be default.
+
+*This text should be emphasised.* (Not in REVTeX table, but produced by the default `*text*` syntax.)
+
+\textit{This text should be italics.}
+
+**This text should be bold**
+
+`The text should be typewriter.`
+
+\textrm{This text should be roman.}
+
+\textsl{This text should be slanted.}
+
+\textsf{This text should be sans-serif.}
+
+[This text should be small-caps.]{.smallcaps}
+
+\textmd{This text should be medium series.}
+
+\textnormal{This text should be normal series.}
+
+\textup{This text should be upright seires.}
+
+# Math Fonts
+
+$math default$
+
+$\mathit{math italics}$
+
+$\mathbf{math bold}$
+
+$\mathtt{math typewriter}$
+
+$\mathsf{math sans-serif}$
+
+$\mathcal{MATH CALIGRAPHIC}$
+
+$\mathnormal{math normal}$
+
+(Note: we don't need `\bm` thanks to unicode math, use `\symbf` instead, e.g.: $\symbf{\Omega}$)
+
+$\mathfrak{math fraktur}$
+
+$\mathbb{math blackboard}$
