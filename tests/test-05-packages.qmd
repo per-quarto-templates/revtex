@@ -1,0 +1,44 @@
+```{=latex}
+\makeatletter
+\newcommand{\isloaded}[1]{
+  \@ifpackageloaded{#1}{\texttt{#1} is LOADED}{\texttt{#1} is not loaded }
+}
+\makeatother
+```
+
+# Packages that should be loaded
+
+\isloaded{amsfonts}
+
+\isloaded{amssymb}
+
+\isloaded{amsmath}
+
+\isloaded{hyperref}
+
+## Table related packages
+
+\isloaded{array}
+
+\isloaded{dcolumn}
+
+\isloaded{longtable}
+
+\isloaded{booktabs}
+
+
+# These packages should not be loaded
+
+\isloaded{multicol}
+
+\isloaded{cite}
+
+\isloaded{mcite}
+
+\isloaded{endfloat}
+
+# This package has limited compatability with REVTeX
+
+\isloaded{float}
+
+(`float` has some limited compatability with REVTeX, so being loaded is not a problem in and of itself. See page 5 of the REVTeX Author Guide.)
