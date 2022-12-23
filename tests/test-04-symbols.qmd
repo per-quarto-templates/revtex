@@ -1,0 +1,25 @@
+\textemdash `\textemdash`
+
+\textendash `\textendash`
+
+\textexclamdown `\textexclamdown`  
+
+\textquestiondown `\textquestiondown`
+
+\textquotedblleft `\textquotedblleft`
+
+\textquotedblright `\textquotedblright`
+
+\textquoteleft `\textquoteleft`
+
+\textquoteright `\textquoteright`
+
+\textbullet `\textbullet`
+
+\textperiodcentered `\textperiodcentered`
+
+\textvisiblespace  `\textvisiblespace`
+
+f\textcompwordmark{}f (contrast with: ff) `\textcompwordmark` 
+
+\textcircled{a} `\textcircled{}` 
