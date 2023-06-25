@@ -12,6 +12,9 @@ $if(abstract)$
 $abstract$
 \end{abstract}
 $endif$
+$if(keywords)$
+\keywords{$for(keywords)$$keywords$$sep$; $endfor$}
+$endif$
 $if(beamer)$
 \frame{\titlepage}
 $else$
