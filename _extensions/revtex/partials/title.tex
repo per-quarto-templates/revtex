@@ -37,6 +37,8 @@ $for(by-author)$
     $for(by-author.affiliations)$
       \affiliation{$by-author.affiliations.name$}
     $endfor$
+    $else$
+    \noaffiliation
   $endif$
 $endfor$
 % End AUTHORS
