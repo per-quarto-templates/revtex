@@ -1,0 +1,18 @@
+---
+title: "Test the loading of other packages."
+format:
+  revtex-pdf:
+    include-in-header: 
+      text: |
+        \usepackage{pgfplots}
+---
+
+```{=latex}
+\makeatletter
+\newcommand{\isloaded}[1]{
+  \@ifpackageloaded{#1}{\texttt{#1} is LOADED}{\texttt{#1} is not loaded }
+}
+\makeatother
+```
+
+\isloaded{pgfplots}
