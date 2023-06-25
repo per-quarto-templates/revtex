@@ -21,12 +21,27 @@ $else$
 $endif$
 \subtitle{$subtitle$}
 $endif$
-\author{$for(authors)$$it.name.literal$$sep$ \and $endfor$}
+% Start AUTHORS
+$for(by-author)$
+  \author{$by-author.name.literal$}
+  $if(by-author.email)$
+    \email[E-mail: ]{$by-author.email$}
+  $endif$
+  $if(by-author.url)$
+    \email[Visit: ]{$by-author.url$}
+  $endif$
+  $if(by-author.acknowledgements)$
+    \thanks{$by-author.acknowledgements$}
+  $endif$
+  $if(by-author.affiliations)$
+    $for(by-author.affiliations)$
+      \affiliation{$by-author.affiliations.name$}
+    $endfor$
+  $endif$
+$endfor$
+% End AUTHORS
 \date{$date$}
 $if(beamer)$
-$if(institute)$
-\institute{$for(institute)$$institute$$sep$ \and $endfor$}
-$endif$
 $if(titlegraphic)$
 \titlegraphic{\includegraphics{$titlegraphic$}}
 $endif$
