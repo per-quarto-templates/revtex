@@ -4,6 +4,7 @@ project:
     - tests/basic*.qmd
     - tests/authguide-S2*.qmd
     - tests/authguide-S3*.qmd
+    - tests/authguide-S4*.qmd
   output-dir: test-results
   pre-render: bash scripts/remove-files-in-test-results.sh
   post-render:
