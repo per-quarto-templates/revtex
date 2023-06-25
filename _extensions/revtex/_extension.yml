@@ -31,3 +31,4 @@ contributes:
       society: aps
       journal-style: false
       layout: reprint
+      address-layout: grouped
