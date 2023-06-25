@@ -1,0 +1,13 @@
+---
+title: |
+  A paper title\
+  with a line break.
+format:
+  revtex-pdf:
+    layout: onecolumn
+---
+
+# This heading `\protect\\`{=latex}also has a line break
+
+Text in a paragraph\
+may have a line break too.
