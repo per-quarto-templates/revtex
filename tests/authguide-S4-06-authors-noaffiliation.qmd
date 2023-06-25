@@ -1,0 +1,28 @@
+---
+title: "Test authors"
+author:
+  - name: Bugs Bunny
+    affiliations:
+      - Looney Tune Studios
+  - name: Rodger Rabbit
+  - name: Mickey Mouse
+    affiliations:
+      - Disney World
+---
+
+
+# Heading 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper feugiat augue, vel molestie sapien porta eget. Suspendisse aliquam tincidunt ligula, a posuere metus aliquet quis. Vestibulum ultrices est justo, at tincidunt tortor tempor sit amet. Donec a dignissim sem. Phasellus ut justo vel purus dapibus euismod. Cras in massa tortor. Phasellus libero leo, condimentum in elit eget, dictum malesuada urna. Suspendisse eget tortor eu est porta hendrerit. In varius, mauris eu laoreet viverra, neque ante tempus arcu, ut euismod erat est ut nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+## Heading 1.1
+
+Etiam sit amet dui ligula. Donec facilisis finibus turpis, vitae posuere justo accumsan vel. Vestibulum sagittis dolor eu nisi fermentum lacinia. Proin vel ligula et magna luctus tristique sed sit amet sapien. Aenean tempor magna vitae fringilla luctus. Nunc eget odio quis massa egestas luctus. Donec quis nisl luctus, finibus erat eu, rutrum libero.
+
+# Heading 2
+
+Aliquam vulputate lobortis metus at condimentum. In non ligula diam. Quisque non eleifend felis. Vestibulum eu elit ullamcorper, congue nisl ut, lacinia nibh. Suspendisse non aliquet nisi, vitae convallis nisi. Cras eu diam non nulla imperdiet porta. Mauris dapibus urna ac pulvinar efficitur.
+
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer eros odio, commodo eget velit ut, maximus convallis tortor. Duis convallis lacus orci, eleifend luctus turpis placerat venenatis. Pellentesque sagittis augue at aliquet hendrerit. Ut augue odio, finibus sed magna vel, aliquet aliquet nisi. Donec vitae gravida orci. Vivamus lacinia convallis erat ac dapibus. In vel nisl tincidunt, pretium ipsum et, euismod nisl. Quisque at sollicitudin sapien, rutrum varius odio. Maecenas a eros vel mi accumsan volutpat. Nullam vitae dui metus. Integer luctus massa eget elit tristique, a varius massa pharetra.
+
+Nulla ut ante sed diam imperdiet suscipit sed vel leo. Vivamus vulputate imperdiet mattis. Maecenas ut venenatis arcu, nec laoreet nibh. Vestibulum laoreet interdum odio, sed rutrum dolor rutrum sit amet. Morbi in sem ac neque dapibus sagittis. Vivamus eleifend sollicitudin nunc in vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent sollicitudin a metus ac blandit. Curabitur odio arcu, facilisis nec rhoncus ut, mattis tristique lacus. Integer at rhoncus neque. Nam faucibus dolor vel leo posuere, quis molestie ipsum volutpat. Fusce magna orci, tempor vel est id, aliquet pretium lectus. Donec convallis leo lacus, eu tempor nisl scelerisque ut. Nulla tempor sapien ante, sit amet auctor leo eleifend eu. Nunc sed lacinia nulla.
