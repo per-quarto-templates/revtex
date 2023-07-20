@@ -1,0 +1,28 @@
+format:
+  revtex-pdf:
+    # revtex api options
+    society: aps
+    journal-style: prstper
+    # additional classoptions
+    classoption: 
+      - titlepage
+      - longbibliography
+    # font
+    pdf-engine: pdflatex
+    fontfamily: times
+    # page margins
+    geometry:
+      - tmargin=1in
+      - bmargin=1in
+      - lmargin=0.75in
+      - rmargin=0.75in
+    # override quarto defaults
+    indent: true
+    number-sections: true
+    crossref: 
+      fig-title: FIG
+      tbl-title: TABLE
+      title-delim: .
+    # Citations
+    cite-method: natbib
+    keep-tex: true
