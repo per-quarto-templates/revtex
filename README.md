@@ -1,6 +1,6 @@
 # PER-QT/REVTeX
 
-This is a [Quarto extension] to facilitate the creation of journal articles that use the [REVTeX macro package]. 
+This is a [Quarto extension] to facilitate the creation of journal articles that use the [REVTeX macro package]. You can see [the PERC 2023 poster about it here].
 
 How to try out the demo:
 
@@ -18,3 +18,4 @@ If you are interested in trying the extension out or contributing to development
 [Quarto CLI]: https://quarto.org/docs/get-started/
 [Quarto extension]: https://quarto.org/docs/extensions/listing-journals.html
 [REVTeX macro package]: https://journals.aps.org/revtex
+[the PERC 2023 poster about it here]: https://astrasword.github.io/posters/per-qt/
