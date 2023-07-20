@@ -9,6 +9,41 @@ $if(CJKmainfont)$
 $endif$
 %
 $doc-class.tex()$
+%%% PRETEND CAPTION HAS BEEN LOADED
+\ProvidesFile{caption.sty}
+\ProvidesFile{subcaption.sty}
+%%%
+%%%% BABEL PATCH (from this stack exchange question: https://tex.stackexchange.com/questions/266336/bibliography-error-with-revtex4-when-language-included-with-book)
+\usepackage[english]{babel}
+
+\makeatletter
+% A change to a babel macro
+\def\bbl@set@language#1{%
+  \edef\languagename{%
+    \ifnum\escapechar=\expandafter`\string#1\@empty
+    \else\string#1\@empty\fi}%
+  %%%% ADDITION
+  \@ifundefined{babel@language@alias@\languagename}{}{%
+    \edef\languagename{\@nameuse{babel@language@alias@\languagename}}%
+  }%
+  %%%% END ADDITION
+  \select@language{\languagename}%
+  \expandafter\ifx\csname date\languagename\endcsname\relax\else
+    \if@filesw
+      \protected@write\@auxout{}{\string\select@language{\languagename}}%
+      \bbl@for\bbl@tempa\BabelContentsFiles{%
+        \addtocontents{\bbl@tempa}{\xstring\select@language{\languagename}}}%
+      \bbl@usehooks{write}{}%
+    \fi
+  \fi}
+% The user interface
+\newcommand{\DeclareLanguageAlias}[2]{%
+  \global\@namedef{babel@language@alias@#1}{#2}%
+}
+\makeatother
+
+\DeclareLanguageAlias{en}{english}
+%%%% BABEL PATCH
 
 $if(beamer)$
 $if(background-image)$
@@ -270,8 +305,8 @@ $if(dir)$
 $endif$
 $if(biblio-config)$
 $if(natbib)$
-\usepackage[$natbiboptions$]{natbib}
-\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+%\usepackage[$natbiboptions$]{natbib}
+%\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
 $if(biblatex)$
 \usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
