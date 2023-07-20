@@ -1,0 +1,86 @@
+---
+title: |
+  PER-QT Example:\ 
+  A proof of concept in the style of the *PERC Proceedings*
+author:
+  - name: Astra Sword
+    affiliations:
+      - The Open University
+  - name: Michael Fox
+    affiliations:
+      - Imperial College London
+abstract: |
+  This mini-paper is a proof of concept constructed in the style of the *PERC Proceedings* to illustrate our progress help us identify the major technical hurdles that remain. This shows that most of the major features needed to write an academic paper can be implemented, but there are specific issues around tables. If successful, this project could help PER researchers produce research faster, with better reproducibility, and disseminate it in a wider range of accessible formats.
+bibliography: demo-references.bib
+format: 
+  revtex-pdf: default
+  html: default
+  docx: default
+metadata-files:
+  - _perc_patch.yaml
+---
+
+# Introduction {#sec-intro}
+
+Scientific writing is almost impossible without the ability to reference sources [@knauff_efficiency_2014]; and ideally, we want to be able to reference any source, @knauff_efficiency_2014, in multiple, flexible ways.
+
+As important as it is to reference others, we also need to be able to reference other parts of our own work to signpost if we are going to:
+
+  1. Describe innovative methods (@sec-methods).
+  2. Disseminate novel results (@sec-results).
+  3. Discuss provocative ideas (@sec-discussion).
+
+# Methods {#sec-methods}
+
+Statistical methods would be hard to write if you could not show the exact formula used, such as @eq-effect-size, which shows Cohen's $d$. A unique benefit of this format though, is that one can embed the exact code used in analysis, as in the R code below, or just transparently [publish your entire source code](https://github.com/per-quarto-templates/revtex).
+
+```{r, echo=TRUE}
+t_results <- t.test(extra ~ group, 
+  data=sleep, paired=TRUE)
+```
+$$ 
+d = \frac{\bar{x}_1-\bar{x}_2}{s}
+$$ {#eq-effect-size}
+
+# Results {#sec-results}
+
+```{r}
+#| label: fig-sleep
+#| fig-cap: "Repeated measures data from 10 patients taking one of two sleep aiding drugs. Drug 2 appears more effective."
+boxplot(extra ~ group, data=sleep, col=c("#add8e6", "#6f64cb"))
+```
+
+Results can be plotted directly from code, just look at @fig-sleep! You can even embed the results of significance tests inline, quoting that with a paired t-test, Treatment 2 appears better than Treatment 1 with p = `r t_results$p.value`.
+
+Unfortunately, the compatibility issues around REVTEX tables have proven particularly difficult to resolve. The best solution we have at the moment is writing out tables like @tbl-means out manually specifically for REVTEX PDFs.
+
+::: {.content-hidden unless-format="pdf"}
+```{=latex}
+\begin{table}
+\caption{{#tbl-means}A manually transcribed table showing the mean extra sleep each treatment grants.}
+\begin{ruledtabular}
+\begin{tabular}{c c c c }
+& \textbf{Treatment} & \textbf{Mean Extra Sleep (hours)} & \\ \hline
+& 1 & 0.75 & \\
+& 2 & 2.33 & \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+```
+:::
+
+::: {.content-visible unless-format="pdf"}
+```{r}
+#| label: tbl-means
+#| tbl-cap: An automatically generated table showing the mean extra sleep each treatment grants.
+tibble::as_tibble(sleep) |> 
+  dplyr::group_by(group) |> 
+  dplyr::summarise(mean(extra)) |>
+  knitr::kable()
+```
+:::
+
+
+# Discussion {#sec-discussion}
+
+Overall, this proof of concept appears to work well so far, but further development and "real world" testing is needed.
