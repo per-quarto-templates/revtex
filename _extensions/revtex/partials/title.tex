@@ -42,7 +42,9 @@ $for(by-author)$
   $endif$
 $endfor$
 % End AUTHORS
+$if(date)$
 \date{$date$}
+$endif$
 $if(beamer)$
 $if(titlegraphic)$
 \titlegraphic{\includegraphics{$titlegraphic$}}
